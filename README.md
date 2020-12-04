@@ -26,4 +26,4 @@ En esta práctica vamos a configurar Nginx para que trabaje como un balanceador 
 **Referencias**
 ------------
 - Guía original para la práctica.
-https://josejuansanchez.org/iaw/practica-06-teoria/index.html#opci%C3%B3n-1-nginx-y-php-fpm-se-ejecutan-en-la-misma-m%C3%A1quina
+https://josejuansanchez.org/iaw/practica-07/
