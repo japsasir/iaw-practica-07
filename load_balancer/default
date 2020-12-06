@@ -13,8 +13,8 @@
 http {
   upstream frontend {
 ###---------------------Aquí introducimos la IP privada de nuestros front_end---------------------------------- ###
-    server 172.
-    server 172.
+    server 172.31.57.41
+    server 172.31.60.123
 
   }
 
