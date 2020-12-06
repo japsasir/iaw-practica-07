@@ -1,0 +1,30 @@
+###--------------------------------------------------------###
+### Configuración del proxy balanceador de carga           ###
+###------------------------------------------------------- ###
+
+###---------------------Método de carga---------------------------------- ###
+# Usaremos el balanceo de carga por defecto, round-robin. No es necesario añadir ninguna línea.
+# Wikipedia: Las peticiones son distribuidas entre los servidores de forma cíclica, independientemente de la carga del servidor. Distribuye las peticiones de forma ecuánime pero la carga no.
+# Otros métodos son:
+# least_conn; menos conexiones activas
+# ip_hash; filtrar por ip. El mismo solicitante siempre acaba en el mismo servidor si está disponible.
+# random; es más avanzado, permite una selección aleatoria entre dos servidores atendiendo ciertos criterios
+
+http {
+  upstream frontend {
+###---------------------Aquí introducimos la IP privada de nuestros front_end---------------------------------- ###
+    server 172.
+    server 172.
+
+  }
+
+  server {
+    listen 80;
+    server_name www.domain.com;
+    location / {
+      proxy_pass http://frontend;
+    }
+  }
+}
+
+# https://www.nginx.com/resources/wiki/start/topics/examples/loadbalanceexample/
