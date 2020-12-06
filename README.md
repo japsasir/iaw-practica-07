@@ -16,11 +16,14 @@ En esta práctica vamos a configurar Nginx para que trabaje como un balanceador 
 5. default-Dos archivos de configuración Nginx, uno para lemp.sh y otro para load_balancer.sh. Separados en carpeta. 
 **Pasos seguidos**
 ------------
+En primera instancia desplegamos nuestro servidor back_end con el script correspondiente.
+
+En segundo lugar desplegamos nuestros dos servidores front_end con pila LEMP. Deberemos especificar la variable IP_PRIVADA que apunta a nuestro back_end. Hay que modificar /var/www/html/index.php manualmente para indicar en que frontal estamos, guardar la edición y reiniciar Nginx. En mi práctica, he elegido usar <p class="lead">Front_end_1</p> como prueba.
+
+En último lugar, desplegamos nuestro balanceador de carga. Necesitaremos especificar las ip privadas de nuestro servidores front_end en el archivo default.
 
 **Archivos de configuración alterados durante el script**
 ------------
-
-
 
 
 **Errores**
